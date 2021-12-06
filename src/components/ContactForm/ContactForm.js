@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import s from './ContactForm.module.css';
 import { v4 as uuidv4 } from 'uuid';
-import { useAddContactMutation, useGetContactsQuery } from '../../serviceApi/Api';
+import { useAddContactMutation} from '../../serviceApi/Api';
 
 export default function ContactForm () {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const [addNewContact] = useAddContactMutation();
-  console.log(useGetContactsQuery())
 
   const handleChange = e => {
     const { name, value } = e.target;

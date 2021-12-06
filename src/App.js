@@ -51,7 +51,7 @@ export default function App () {
           element={<PrivateRoutes isAuth={isAuth} component={HomePage} />}
         />
         <Route
-          path="*"
+          path="/"
           element={<PublicRoutes isAuth={isAuth} component={HomePage} />}
         />
       </Routes>
